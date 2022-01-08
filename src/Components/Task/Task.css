@@ -1,0 +1,30 @@
+.taskpage{
+    background-color: rgb(48, 49, 49);
+    height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-decoration: none;
+}
+.profileTitle{
+    padding: 15px;
+    color: rgb(2, 119, 18);
+    margin: auto;
+    text-align: center;
+}
+.taskform{
+    background-color: rgb(177, 174, 174);
+    width: 50%;
+    height: 550px;
+    border-radius: 10px;
+    /* text-align: center; */
+    margin: auto;
+    padding: 30px;
+}
+.task{
+    font-size: 18px;
+    font-weight: 600;
+}
+.createbtn{
+    margin-top: 25px;
+    text-align: center;
+}

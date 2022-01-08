@@ -1,0 +1,26 @@
+.body{
+    background: linear-gradient(to top right, #66ff66 0%, #336699 100%);
+    margin-top:30px;
+    width: 50%;
+    height: 540px;
+    border-radius: 6px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px 25px;
+}
+.siam{
+    color: #336699;
+}
+.frame{
+    text-align: center;
+}
+.Fild{
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(10, 3, 20);
+    font-size: 16px;
+    font-weight: 500;
+}
+.profileTitle{
+    color: rgb(240, 239, 241);
+}

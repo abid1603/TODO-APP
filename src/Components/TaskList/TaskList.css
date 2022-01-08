@@ -1,0 +1,38 @@
+.Cardpage{
+    background-color: rgb(48, 80, 80);
+    height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-decoration: none;
+}
+.cardbody{
+        width: 260px;
+        height: 195px;
+        border-radius: 5px;
+        background: rgb(230, 230, 236);
+        margin: 5px;
+        padding: 0;
+        transition: transform .3s;
+}
+.cardcontent{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardlitle{
+    background-color: rgb(219, 218, 218);
+    width: 260px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px 10px;
+}
+.cardcontent p{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+.cardbody:hover{
+    color: green;
+    transform: scale(1.02);
+}

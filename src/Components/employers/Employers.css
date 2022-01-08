@@ -1,0 +1,58 @@
+.employersbody{
+    background-color: rgb(6, 233, 157);
+    height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-decoration: none;
+}
+.single-employer{
+    background-color: beige;
+    color: black;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    transition: transform .3s;
+}
+.single{
+    background-color: rgb(243, 241, 241);
+    border-radius: 5px;
+    text-align: center;
+}
+p{
+    font-size: 20px;
+    font-weight: 700;
+}
+.single-employer:hover{
+    transform: scale(1.02);
+    color: rgb(8, 144, 168);
+}
+
+.form{
+    padding: 10px;
+    text-align: center;
+}
+.form .updatetitle{
+    color: black;
+}
+.edit{
+    transition: transform .3s;
+    color: blue;
+    padding: 8px;
+    font-size: 18px;
+}
+.delete{
+    transition: transform .3s;
+    color: red;
+    padding-left: 8px;
+    font-size: 18px;
+}
+.edit:hover{
+    
+}
+.delete:hover{
+
+}
+.deletetitle{
+    font-size: 18px;
+    color: red;
+}
