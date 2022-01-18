@@ -1,20 +1,27 @@
 import React from 'react'
 import './TaskList.css'
-import { taskobj } from './Taskobject'
+import {useState, useEffect} from 'react'
+
 
 function Tasklist() {
+    const [taskinfo, settaskinfo] = useState([]);
+    useEffect(()=>{
+        let abid = localStorage.getItem("alltask");
+        settaskinfo(JSON.parse(abid));
+    },[]);
     return (
         <div className='Cardpage'>
-            <div className='container cardcontent'>
+            <div className='container cardcontainer'>
                  {
-                    taskobj.map((card,index) =>{
+                    taskinfo.map((card,index) =>{
                         return(
                             <div className='cardbody'>
                                 <div className='cardlitle'>
-                                    <h5>{card.title}</h5>
+                                    {card.title}
                                 </div>
-                                <div className='cardcontent'>
-                                    <p>{card.Description}</p>
+                                <div className='container cardinfo'>
+                                    <h5>{card.employer}</h5><br></br>
+                                    <span>{card.description}</span>
                                 </div>
                             </div>
                         );

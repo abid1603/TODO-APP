@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './Createprofile.css'
 import {useState,useContext} from 'react'
 // import { EmployersContext } from '../../App';
+import { v4 as uuidv4 } from 'uuid';
 
 function Createprofile() {
     // const abid = useContext(EmployersContext);
@@ -11,28 +12,36 @@ function Createprofile() {
        id : '',
        desination: '',
        email: '',
-       phone: ''
+       phone: '',
+       key: ''
    });
+   let name,value;
+
    const handelcreateprofile = (e) =>{
         e.preventDefault();
-        setEmployers([...employers, person]);
-        localStorage.setItem('employers', JSON.stringify([...employers, person]));
+        //console.log(person);
+           // setPerson({...person, key:uuidv4()});
+            localStorage.setItem('employers', JSON.stringify([...employers, person]));
         // console.log(employers)
         setPerson({
             name : '',
             id : '',
             desination: '',
             email: '',
-            phone: ''
+            phone: '',
+            key: ''
             });
-            //console.log(person);
+        
+           // console.log(person);
     }
-    let name,value;
-
     const handelinputs = (e) =>{
-        name = e.target.name;
-        value = e.target.value;
-        setPerson({...person, [name]:value});
+        if(!person.key){
+            setPerson({...person, key:uuidv4()})
+        }else{
+            name = e.target.name;
+            value = e.target.value;
+            setPerson({...person, [name]:value});
+        }
        // console.log(person)
     }
 
@@ -43,7 +52,7 @@ function Createprofile() {
     return (
         <div className='container frame'>
             <div className='body'>
-                <form onSubmit={handelcreateprofile} >
+                <form onSubmit={handelcreateprofile}>
                 <h2 className='profileTitle'>CREATE PROFILE</h2>
                 <div className='Fild my-2'>
                     <label for="exampleFormControlInput1" class="form-label">Employee Name</label>
@@ -65,10 +74,9 @@ function Createprofile() {
                     <label for="exampleFormControlInput1" class="form-label">Phone number</label>
                     <input type="number" value={person.phone} onChange={handelinputs} name='phone' id='phone' class="form-control" ></input>
                 </div>
-                    <input className='btn btn-success mt-2' type='submit' value='Create'></input>
+                    <input className='btn btn-success mt-2' type='submit' value='Create' ></input>
                 </form>
             </div>
-            
         </div>
     )
 }
